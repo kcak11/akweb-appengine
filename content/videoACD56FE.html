@@ -1,0 +1,23 @@
+<script type="text/javascript">
+var topurl=""+window.top.location;
+if(topurl.indexOf(".com/app.html")==-1){
+window.top.location="http://ashish-web.appspot.com";
+}
+</script>
+<form name="videoForm" action="applications/videoplayer.jsp" method="post" target="videoViewWindow_AK">
+<input type="hidden" name="vtitle"/>
+<input type="hidden" name="vurl"/>
+<input type="hidden" name="vwidth"/>
+<input type="hidden" name="vheight"/>
+</form>
+<br/>
+<br/>
+<div align="center" style="font-size:20px;font-weight:bold;">Please select a Video from the list</div>
+<br/>
+<ul type="square">
+<li><span style="cursor:pointer;" onclick="showVideo(0);">Google Analytics - Non-Ecommerce Sites: Beyond Averages</span><br/><br/></li>
+<li><span style="cursor:pointer;" onclick="showVideo(1);">eCommerce Evolution</span><br/><br/></li>
+<li><span style="cursor:pointer;" onclick="showVideo(2);">How to tell if a website is using SSL Secure Socket Layer</span><br/><br/></li>
+<li><span style="cursor:pointer;" onclick="showVideo(3);">How to Create a Successful E-Commerce Web Site</span><br/><br/></li>
+<li><span style="cursor:pointer;" onclick="showVideo(4);">Social Shopping Sites</span><br/><br/></li>
+</ul>

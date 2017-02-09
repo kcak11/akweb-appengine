@@ -1,0 +1,43 @@
+<script type="text/javascript">
+var topurl=""+window.top.location;
+if(topurl.indexOf(".com/app.html")==-1){
+window.top.location="http://ashish-web.appspot.com";
+}
+</script>
+<div style="width:90%;">
+<br/>
+<br/>
+<div align="center" style="font-size:20px;">
+You need to Login to view this page.
+<div style="font-size:16px;"><br/>Please provide your credentials below</div>
+</div>
+<br/>
+<br/>
+<form>
+<div align="center">
+<div align="left" style="width:70%;border:2px solid #000000;">
+<br/>
+<table align="center" cellpadding="5" cellspacing="1">
+	<tr>
+		<td align="right">Username: </td><td><input type="text" name="uname" style="border:1px solid #000000;width:200px;"/></td>
+	</tr>
+	<tr>
+		<td align="right">Password: </td><td><input id="pwfield" type="password" name="upw" class="searchbox" style="border:1px solid #000000;width:200px;"/></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+		<span style="cursor:pointer;"><img src="pic/click2auth.png" width="258" height="30" id="authbtn_check" onclick="doSecureLoginCheck();"/></span>
+		<!-- <input id="LoginBtn" type="button" value="Click Here to Authenticate Yourself" style="font-size:11px;width:240px;height:25px;border:2px solid #000000;background-color:#ffffff;" onclick="doSecureLoginCheck();"/> -->
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center">
+			<div id="waitMsg" style="display:none;color:#ff0000;font-weight:bold;">Authenticating, Please wait . . .</div>
+			<div id="loginErrorMsg" style="display:none;color:#ff0000;font-weight:bold;">Username/Password not found in our Records.<br/>Please try again !!!</div>
+		</td>
+	</tr>
+</table>
+</div>
+</div>
+</form>
+</div>

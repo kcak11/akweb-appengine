@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+Source:<br/>
+<textarea></textarea><br/>
+Encoded:<br/>
+<textarea></textarea><br/>
+<input type="button" value="Encode" onclick="encodeit();"/>
+<input type="button" value="Decode" onclick="decodeit();"/>
+</form>
+<script type="text/javascript">
+function encodeit(){
+var ta=document.getElementsByTagName("textarea");
+ta[1].value=encodeURIComponent(ta[0].value.split("").reverse().join(""));
+}
+function decodeit(){
+var ta=document.getElementsByTagName("textarea");
+ta[0].value=decodeURIComponent(ta[1].value).split("").reverse().join("");
+}
+</script>
+</body>
+</html>

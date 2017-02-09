@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Ashish's Web</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="ashish,ashishweb,web,video,videos,youtube,ajax,javascript,profile,search,linkedin,linked,in,computers,software,project,projects,computer,information,technology,appengine,appspot,website,ecommerce,security,internet,online,shopping,cart">
+<meta name="keywords" content="ashish,ashishweb,web,video,videos,youtube,ajax,javascript,profile,search,linkedin,linked,in,computers,software,project,projects,computer,information,technology,appengine,appspot,website,ecommerce,security,internet,online,shopping,cart">
+<style type="text/css">
+body{
+background-image:url('pic/topborder.png');
+background-repeat:repeat-x;
+margin:0px;
+font-family:Verdana;
+font-size:12px;
+}
+
+.st_startup{
+width:508px;
+height:187px;
+overflow:hidden;
+border:0px solid #ffffff;
+outline:none;
+background-image:url('pic/startup_bg.jpg');
+background-repeat:no-repeat;
+}
+</style>
+<link rel="shortcut icon" href="http://ashish-web.appspot.com/pic/favicon.ico" />
+<script type="text/javascript">
+document.oncontextmenu=function(){return false;};
+window.onunload=function(e){};
+</script>
+<script type="text/javascript" src="scripts/jq.js"></script>
+</head>
+<body>
+<br/><br/>
+<div align="right">
+<br/>
+<span onclick="doSecureLogin();" style="cursor:pointer;"><img src="pic/loginbtn.png"/></span>&nbsp;&nbsp;&nbsp;
+</div>
+<div style="display:none;">
+<img src="https://ashish-web.appspot.com/pic/adminpage.png" width="1" height="1"/>
+<img src="pic/abt_site.png" style="width:1px;height:1px;"/>
+<img src="pic/dialogclose.png" style="width:1px;height:1px;"/>
+</div>
+<script type="text/javascript">
+function doSecureLogin(){
+window.open("https://ashish-web.appspot.com/applications/adminPage.jsp?requestCode="+(new Date().getTime()/1111),"adminPage_akweb");
+}
+</script>
+<br/><br/><br/><br/><br/><br/>
+<div align="center" id="pageLoader" style="visibility:hidden;">
+<div class="st_startup">
+<div style="position:relative;left:20px;top:100px;width:420px;overflow:hidden;font-family:Verdana;font-weight:bold;" align="left">Loading, Please wait . . .</div>
+<div style="position:relative;left:17px;top:110px;width:420px;overflow:hidden;border:4px solid #000000;">
+<div style="height:23px;overflow:hidden;border:2px solid #ffffff;">
+<script type="text/javascript">
+var pcontent="<img src=\"pic/prgbar.png\" style=\"visibility:hidden;\" id=\"prg";
+var econtent="\" />";
+var prgsize=420;
+document.open();
+for(i=0;i<prgsize;i++){
+document.write(pcontent+i+econtent);
+}
+document.close();
+
+var ctr=0;
+function showProgress(){
+if(ctr<prgsize){
+document.getElementById("prg"+ctr).style.visibility="visible";
+ctr++;
+setTimeout(function(){showProgress();},30);
+}else{
+loadQuick();
+}
+}
+function initPageLoad(){
+document.getElementById("pageLoader").style.visibility="visible";
+showProgress();
+}
+setTimeout(function(){initPageLoad();},1000);
+</script>
+</div>
+</div>
+</div>
+</div>
+<div align="center" style="width:100%;">
+<img src="pic/spacer.png" style="width:1px;height:121px;"/><br/>
+&copy; <span id="cpYear">&nbsp;</span> <u>All Rights Reserved</u>
+<br/>
+Contact (For More Information): 
+<br/>
+<span style="font-size:10px;">kcak11@gmail.com / kcashish11@gmail.com</span>
+</div>
+
+<div style="display:none;width:1px;height:1px;overflow:hidden;">
+<img src="pic/sitemenu.png"/>
+<img src="pic/go.png"/>
+<img src="pic/pagebg.png"/>
+<img src="pic/loading_ext.png"/>
+</div>
+</body>
+<script type="text/javascript">
+document.getElementById("cpYear").innerHTML=new Date().getFullYear();
+function _getEKey(){var ek=[];for(eki=0;eki<11;eki++){ek.push((Math.pow(2,11)*Math.random()).toString(36).split(".").join(""));}var eks=ek.join("");var eksa=eks.split("");for(eksai=0;eksai<eksa.length;eksai++){if(((eksai%11)*eksa[eksai].charCodeAt(0))%2==0){eksa[eksai]=eksa[eksai].toUpperCase();}}return eksa.join("");}
+function loadSite(){
+window.top.location="app.html?rToken="+_getEKey();
+}
+function loadQuick(){
+setTimeout(function(){loadSite();},250);
+}
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12203959-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</html>

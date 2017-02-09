@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+<servlet>
+<servlet-name>aboutme</servlet-name>
+<jsp-file>/aboutkcak/aboutme.jsp</jsp-file>
+<load-on-startup>0</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>aboutme</servlet-name>
+<url-pattern>/aboutme/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>bookmarklinks</servlet-name>
+<jsp-file>/bklinks/blinks.jsp</jsp-file>
+<load-on-startup>0</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>bookmarklinks</servlet-name>
+<url-pattern>/bookmarks/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>obrowser</servlet-name>
+<jsp-file>/aboutkcak/obrowser.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>obrowser</servlet-name>
+<url-pattern>/oldbrowser/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>utilities</servlet-name>
+<jsp-file>/applications/utilities.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>utilities</servlet-name>
+<url-pattern>/utilities/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>cv</servlet-name>
+<jsp-file>/cvfiles/indexcv.jsp</jsp-file>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>cv</servlet-name>
+<url-pattern>/cv/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>hexcoder</servlet-name>
+<jsp-file>/applications/hexcoder.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>hexcoder</servlet-name>
+<url-pattern>/utilities/hexcoder/*</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>hexcoder</servlet-name>
+<url-pattern>/utilities/hexdecoder/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>hexcoderfbtab</servlet-name>
+<jsp-file>/applications/hexcoder_fbproftab.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>hexcoderfbtab</servlet-name>
+<url-pattern>/utilities/hexcoder/fbtab/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>webinject</servlet-name>
+<jsp-file>/applications/webinjection.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>webinject</servlet-name>
+<url-pattern>/utilities/webinjection/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>httptrace</servlet-name>
+<jsp-file>/applications/httptrace.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>httptrace</servlet-name>
+<url-pattern>/utilities/httptrace/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>sitescanutility</servlet-name>
+<jsp-file>/applications/sitescanutility.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>sitescanutility</servlet-name>
+<url-pattern>/utilities/sitescan/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>sitescanreport</servlet-name>
+<jsp-file>/applications/sitescanreport.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>sitescanreport</servlet-name>
+<url-pattern>/utilities/sitescanreport/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>keygenutility</servlet-name>
+<jsp-file>/applications/keygenutil.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>keygenutility</servlet-name>
+<url-pattern>/utilities/keygen/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>digicrypt</servlet-name>
+<jsp-file>/applications/digicrypt.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>digicrypt</servlet-name>
+<url-pattern>/utilities/digicrypt/*</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>digicryptfbtab</servlet-name>
+<jsp-file>/applications/digicrypt_fbproftab.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+<servlet-name>digicryptfbtab</servlet-name>
+<url-pattern>/utilities/digicrypt/fbtab/*</url-pattern>
+</servlet-mapping>
+<security-constraint> 
+        <web-resource-collection> 
+            <url-pattern>/applications/private/*</url-pattern> 
+            <url-pattern>/aboutkcak/aboutme.jsp</url-pattern> 
+            <url-pattern>/aboutkcak/obrowser.jsp</url-pattern> 
+        </web-resource-collection> 
+        <auth-constraint> 
+            <role-name>admin</role-name> 
+        </auth-constraint> 
+    </security-constraint>
+</web-app>
